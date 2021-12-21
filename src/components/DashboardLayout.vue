@@ -64,7 +64,7 @@ export default {
             location.reload();
         },
         isPageAdmin(){
-            if(items.status == "admin")
+            if(this.items.status == "admin")
             {
                 return true;
             }
@@ -106,8 +106,9 @@ export default {
 }
 
 #bg{
-    background-color: #3ba1c5
-;
+    /* background-color: #3ba1c5
+; */
+margin-top: 0px;
 }
 .lib{
     font-size: 25px;
