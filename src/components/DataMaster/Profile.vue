@@ -1,7 +1,7 @@
 <template>
     <v-main class="profile">
-        <h3 class="text-h3 font-weight-medium mb-5">Profile</h3>
-        <v-card class="mx-auto" max-width="344" outlined elevation="2" >
+        <h3 class="text-h3 font-weight-medium mb-5" id="settingfont"><b>Profile</b> </h3>
+        <v-card class="mx-auto" max-width="344" outlined elevation="2" rounded="5" >
             <v-card-title class="justify-center">Nama</v-card-title>
             <v-card-text class="text-h6 font-weight-light justify-center">{{ users.nama }}</v-card-text>
             <v-card-title class="justify-center">Email</v-card-title>
@@ -19,7 +19,7 @@
         
         <v-dialog v-model="dialog" persistent max-width="600px">
             <v-card>
-                <v-card-title>
+                <v-card-title class="justify-center">
                     <span class="headline">Edit Profile</span>
                 </v-card-title>
                 <v-card-text>
@@ -188,3 +188,9 @@ export default {
     },
 };
 </script>
+<style>
+#settingfont{
+    color: white;
+    font-weight: bolder;
+}
+</style>

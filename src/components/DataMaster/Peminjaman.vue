@@ -1,6 +1,6 @@
 <template>
     <v-main class="list">
-        <h3 class="text-h3 font-weight-medium mb-5">Daftar Peminjaman Buku</h3>
+        <h3 class="text-h3 font-weight-medium mb-5" id="settingfont"><b>Daftar Peminjaman Buku</b> </h3>
 
         <v-card>
             <v-card-title>
@@ -18,7 +18,7 @@
 
         <v-dialog v-model="dialog" persistent max-width="600px">
             <v-card>
-                <v-card-title>
+                <v-card-title class="justify-center">
                     <span class="headline">{{ formTitle }} Peminjaman</span>
                 </v-card-title>
                 <v-card-text>
@@ -208,3 +208,9 @@ export default {
     },
 };
 </script>
+<style>
+#settingfont{
+    color: white;
+    font-weight: bolder;
+}
+</style>

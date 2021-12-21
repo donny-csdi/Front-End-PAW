@@ -1,12 +1,12 @@
 <template>
     <v-main class="list">
-        <h3 class="text-h3 font-weight-medium mb-5">Donasi Buku</h3>
+        <h3  class="text-h3 font-weight-medium mb-5" id="settingfont"> <b>Donasi Buku</b> </h3>
 
         <v-card>
             <v-card-title>
                 <v-text-field v-model="search" append-icon="mdi-magnify" label="Search" single-line hide-details></v-text-field>
                 <v-spacer></v-spacer>
-                <v-btn color="success" dark @click="dialog = true">Donasikan Buku</v-btn>
+                <v-btn  color="success" dark @click="dialog = true">Donasikan Buku</v-btn>
             </v-card-title>
             <v-data-table :headers="headers" :items="donasis" :search="search">
                 <template v-slot:[`item.actions`]="{ item }">
@@ -18,7 +18,7 @@
 
         <v-dialog v-model="dialog" persistent max-width="600px">
             <v-card>
-                <v-card-title>
+                <v-card-title class="justify-center">
                     <span class="headline">{{ formTitle }} Donasi</span>
                 </v-card-title>
                 <v-card-text>
@@ -249,3 +249,11 @@ export default {
     },
 };
 </script>
+<style>
+#settingfont{
+    color: white;
+    font-weight: bolder;
+    font-family: fantasy;
+}
+</style>
+

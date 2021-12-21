@@ -1,6 +1,6 @@
 <template>
     <div class="dashboard">
-        <v-navigation-drawer v-model="drawer" class="fulllheight" width="256" app>
+        <v-navigation-drawer v-model="drawer" class="fullheight" width="256" app>
             <v-list-item>
                 <v-list-item-content>
                     <v-list-item-title class="title">Welcome, {{ nama.substring(0,8) }} </v-list-item-title>
@@ -22,13 +22,15 @@
             </v-list>
         </v-navigation-drawer>
         <v-app-bar app fixed height="75px">
+            
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-            <VSpacer />
+            <h3 class="lib">E-Lib</h3>
+            <V-Spacer />
             <v-toolbar-items>
-                <v-btn text router @click="logout()"><v-icon>mdi-power</v-icon></v-btn>
+                <v-btn text router @click="logout()"><v-icon color="red">mdi-power</v-icon></v-btn>
             </v-toolbar-items>
         </v-app-bar>
-        <div class="fullheight pa-5">
+        <div class="fullheight pa-5" id="bg">
             <router-view></router-view>
         </div>
     </div>
@@ -91,13 +93,25 @@ export default {
 {
     min-height: 100vh !important;
 }
+
 .title
 {
     margin-bottom: 5px;
 }
+
 .router
 {
     text-decoration: none;
     color: black;
+}
+
+#bg{
+    background-color: #3ba1c5
+;
+}
+.lib{
+    font-size: 25px;
+    font-family: monospace;
+    color: royalblue;
 }
 </style>

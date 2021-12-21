@@ -1,6 +1,6 @@
 <template>
     <v-main class="list">
-        <h3 class="text-h3 font-weight-medium mb-5">Reservasi Tempat</h3>
+        <h3 class="text-h3 font-weight-medium mb-5" id="settingfont"><b>Reservasi Tempat</b> </h3>
 
         <v-card>
             <v-card-title>
@@ -18,7 +18,7 @@
 
         <v-dialog v-model="dialog" persistent max-width="600px">
             <v-card>
-                <v-card-title>
+                <v-card-title class="justify-center" >
                     <span class="headline">{{ formTitle }} Reservasi</span>
                 </v-card-title>
                 <v-card-text>
@@ -243,3 +243,12 @@ export default {
     },
 };
 </script>
+<style>
+.headline{
+    text-align: center;
+}
+#settingfont{
+    color: white;
+    font-weight: bolder;
+}
+</style>
